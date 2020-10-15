@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+import org.junit.jupiter.api.Test;
+
 import com.mysql.cj.jdbc.Driver;
 
 //import com.mysql.jdbc.Driver;
@@ -19,6 +21,7 @@ import com.mysql.cj.jdbc.Driver;
  */
 
 public class TestConnection {
+	@Test
 	public static void main(String[] args) throws Throwable {
 
 		// 1.加载驱动

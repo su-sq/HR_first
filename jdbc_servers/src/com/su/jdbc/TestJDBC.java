@@ -12,7 +12,7 @@ import java.util.Properties;
  */
 public class TestJDBC {
 	
-//	@SuppressWarnings("unused")
+
 	public static void main(String[] args) throws Exception {
 		
 		Properties info  = new Properties();
@@ -20,13 +20,12 @@ public class TestJDBC {
 		String user = info.getProperty("user");
 		String password = info.getProperty("password");
 		String driver = info.getProperty("driver");
-		String url = info.getProperty("url");
+		String url = info.getProperty("jdbc.connectionURL");
 		
 		//1.注册驱动
 		Class.forName(driver);
 		
 		//2.获取连接
-		@SuppressWarnings("unused")
 		Connection connection = DriverManager.getConnection(url, user, password);
 		
 		System.out.println("连接成功");
